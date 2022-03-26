@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>返校及进出校园卡</title>
+    <link rel="shortcut icon" href="./favicon.ico">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: url(./bg.jpg) repeat;
+            background-size: 100%;
+            font: 14px Helvetica Neue, Helvetica, PingFang SC, Tahoma, Arial, sans-serif;
+        }
+
+        .cl0 {
+            z-index: 9999;
+            background: url(./3_01.jpg) no-repeat;
+            background-size: 100%;
+        }
+
+        .cl1 {
+            z-index: 9999;
+            margin-top: -20px;
+            background: url(./3_02.jpg) no-repeat;
+            background-size: 100%;
+        }
+
+        .cl2 {
+            z-index: 9999;
+            text-align: center;
+            background: url(./3_03.jpg) no-repeat;
+            background-size: 100%;
+        }
+
+        .cl3 {
+            height: 200px;
+            margin-top: -40px;
+            background: url(./3_04.jpg) repeat;
+            background-size: 100%;
+        }
+
+        .cl4 {
+            background: url(./3_05.jpg) no-repeat;
+            background-size: 100%;
+        }
+
+        .cl5 {
+            background: url(./3_06.jpg) no-repeat;
+            background-size: 100%;
+        }
+
+        .cl6_green {
+            height: 40px;
+            background: url(./2_07.jpg) no-repeat;
+            background-size: 100%;
+        }
+
+        .cl7 {
+            background: url(./3_08.jpg) no-repeat;
+            background-size: 100%;
+        }
+
+        .cl8 {
+            height: 60px;
+            background: url(./3_10.jpg) no-repeat;
+            background-size: 100%;
+        }
+
+        .page-hd {
+            padding: 20px;
+        }
+    </style>
+    <script>
+        function show() {
+            var date = new Date();
+            var now = "";
+            var Year = 0;
+            var Month = 0;
+            var Day = 0;
+            var Hour = 0;
+            var Min = 0;
+            var Second = 0;
+            Year = date.getFullYear();
+            Month = date.getMonth() + 1;
+            Day = date.getDate();
+            now = date.getFullYear() + "/";
+            Hour = date.getHours();
+            Min = date.getMinutes();
+            Second = date.getSeconds();
+
+
+
+            if (Month >= 10) {
+                now += Month + "/";
+            }
+            else {
+                now += "0" + Month + "/";
+            }
+            if (Day >= 10) {
+                now += Day + " ";
+            }
+            else {
+                now += "0" + Day + " ";
+            }
+
+            if (Hour >= 10) {
+                now += Hour + ":";
+            }
+            else {
+                now += "0" + Hour + ":";
+            }
+            if (Min >= 10) {
+                now += Min + ":";
+            }
+            else {
+                now += "0" + Min + ":";
+            }
+            if (Second >= 10) {
+                now += Second;
+            }
+            else {
+                now += "0" + Second;
+            }
+
+
+
+            document.getElementById("times").innerHTML = now;
+            setTimeout("show()", 1000);
+        }
+    </script>
+</head>
+
+<body onload="show()">
+
+
+
+    <div class="page-hd cl0"></div>
+    <div class="page-hd cl1">
+    </div>
+    <div class="page-hd cl2">
+        <p style="font-size: 30px; font-family: STHeiti; font-weight: bold;" align="center">曾奕凱</p>
+    </div>
+    <div class="page-hd cl3" style=" text-align: center;float:none;">
+        <p style="font-size: 20px; text-align:center;"> 2019055427 </p>
+        <p style="font-size: 16px; text-align:center;">管理学院</p>
+        <p style="font-size: 16px; text-align:center;">
+            <span> 番禺校区 T4 </span>
+        </p>
+        <div id="qr" class="tcenter" style="padding: 10px;height:170px;">
+            <img src="./qr.jpg">
+
+        </div>
+
+        <p style="font-size: 16px; text-align:center;">
+            <span style="background-color:#009688; color:#fff; font-size:20px; padding:10px 30px;">24日及其后返校</span>
+        </p>
+        <p style="font-size: 16px; font-weight: 200;" align="center"></p>
+    </div>
+    <div class="page-hd cl4">
+
+    </div>
+    <div class="page-hd cl5">
+    </div>
+
+    <div id="colorDIV" class="page-hd cl6 cl6_green" permit="red">
+        <p style=" color:#fff;   font-size: 25px;  font-weight: 200;" align="center">允许进入</p>
+    </div>
+
+    <div class="page-hd cl7"></div>
+    <div class="page-hd cl8"></div>
+
+</body>
+
+</html>
