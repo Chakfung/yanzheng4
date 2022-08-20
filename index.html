@@ -79,60 +79,60 @@
     </style>
     <script>
         function show() {
-            var date = new Date();
-            var now = "";
-            var Year = 0;
-            var Month = 0;
-            var Day = 0;
-            var Hour = 0;
-            var Min = 0;
-            var Second = 0;
-            Year = date.getFullYear();
-            Month = date.getMonth() + 1;
+            let date = new Date();
+            // var now = "";
+            // var Year = 0;
+            // var Month = 0;
+            let Day = 0;
+            // var Hour = 0;
+            // var Min = 0;
+            // var Second = 0;
+            // Year = date.getFullYear();
+            // Month = date.getMonth() + 1;
             Day = date.getDate();
-            now = date.getFullYear() + "/";
-            Hour = date.getHours();
-            Min = date.getMinutes();
-            Second = date.getSeconds();
+            // now = date.getFullYear() + "/";
+            // Hour = date.getHours();
+            // Min = date.getMinutes();
+            // Second = date.getSeconds();
 
 
 
-            if (Month >= 10) {
-                now += Month + "/";
-            }
-            else {
-                now += "0" + Month + "/";
-            }
-            if (Day >= 10) {
-                now += Day + " ";
-            }
-            else {
-                now += "0" + Day + " ";
-            }
+            // if (Month >= 10) {
+            //     now += Month + "/";
+            // }
+            // else {
+            //     now += "0" + Month + "/";
+            // }
+            // if (Day >= 10) {
+            //     now += Day + " ";
+            // }
+            // else {
+            //     now += "0" + Day + " ";
+            // }
 
-            if (Hour >= 10) {
-                now += Hour + ":";
-            }
-            else {
-                now += "0" + Hour + ":";
-            }
-            if (Min >= 10) {
-                now += Min + ":";
-            }
-            else {
-                now += "0" + Min + ":";
-            }
-            if (Second >= 10) {
-                now += Second;
-            }
-            else {
-                now += "0" + Second;
-            }
+            // if (Hour >= 10) {
+            //     now += Hour + ":";
+            // }
+            // else {
+            //     now += "0" + Hour + ":";
+            // }
+            // if (Min >= 10) {
+            //     now += Min + ":";
+            // }
+            // else {
+            //     now += "0" + Min + ":";
+            // }
+            // if (Second >= 10) {
+            //     now += Second;
+            // }
+            // else {
+            //     now += "0" + Second;
+            // }
 
 
 
-            document.getElementById("times").innerHTML = now;
-            setTimeout("show()", 1000);
+            document.getElementById("day").innerHTML = Day;
+            // setTimeout("show()", 1000);
         }
     </script>
 </head>
@@ -159,7 +159,12 @@
         </div>
 
         <p style="font-size: 16px; text-align:center;">
-            <span style="background-color:#009688; color:#fff; font-size:20px; padding:10px 30px;">24日及其后返校</span>
+            <span style="background-color:#009688; color:#fff; font-size:20px; padding:10px 30px;">
+                <span id="day">12</span>
+                <span style="margin-left: -5px;">日返校</span>
+
+
+            </span>
         </p>
         <p style="font-size: 16px; font-weight: 200;" align="center"></p>
     </div>
